@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-10",
+  "lunch_special": "Special Kolhapuri Veg Feast",
+  "lunch_dishes": "jhjghgvgh",
+  "dinner_special": "Signature Tambda & Pandhra Rassa",
+  "dinner_dishes": "टाम्याटो भाजी हरबरा डाल भाजी वरण तिकटडाळ",
+  "notice": "hug",
+  "is_mess_open": true,
+  "closed_reason": "",
+  "is_parcel_available": true,
+  "parcel_unavailable_reason": "",
+  "dinner_parcel_start": "18:00",
+  "dinner_parcel_end": "19:30",
+  "sunday_lunch_start": "12:00",
+  "sunday_lunch_end": "13:30",
+  "updated_at": "2026-09-10T13:32:35.255Z"
+}
