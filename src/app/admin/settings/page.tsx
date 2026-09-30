@@ -95,6 +95,34 @@ export default function SettingsPage() {
           </button>
         </div>
       </form>
+
+      {/* Danger Zone: System Reset */}
+      <div className="bg-rose-50 border border-rose-200 rounded-2xl p-6 space-y-3">
+        <div className="flex items-center gap-2 text-rose-800 font-extrabold text-sm">
+          ⚠️ Danger Zone: System Data Reset
+        </div>
+        <p className="text-xs text-rose-700">
+          If you want to clear all existing demo students, orders, bills, and start completely fresh, click below.
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            if (confirm('Are you sure you want to clear all demo data and start with an empty student directory?')) {
+              if (typeof window !== 'undefined') {
+                localStorage.removeItem('km_students_v6');
+                localStorage.removeItem('km_orders_v2');
+                localStorage.removeItem('km_bills_v2');
+                localStorage.removeItem('km_payments_v2');
+                localStorage.removeItem('km_registrations_v1');
+                window.location.reload();
+              }
+            }
+          }}
+          className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs rounded-xl transition"
+        >
+          🗑️ Clear Demo Data & Start Fresh
+        </button>
+      </div>
     </div>
   );
 }

@@ -2,50 +2,17 @@ import { createClient } from './supabase/client';
 import { Student, MenuItem, OrderItem, Bill, Payment, Settlement, Leave, AttendanceRecord, TodaysMenu } from './types';
 import { INITIAL_MENU_ITEMS, DEFAULT_SECURITY_DEPOSIT, PARCEL_CHARGE_PER_DAY } from './constants';
 
-const LOCAL_STORAGE_KEY_STUDENTS = 'km_students_v5';
+const LOCAL_STORAGE_KEY_STUDENTS = 'km_students_v6';
 const LOCAL_STORAGE_KEY_MENU = 'km_menu_v1';
-const LOCAL_STORAGE_KEY_ORDERS = 'km_orders_v1';
-const LOCAL_STORAGE_KEY_BILLS = 'km_bills_v1';
-const LOCAL_STORAGE_KEY_PAYMENTS = 'km_payments_v1';
-const LOCAL_STORAGE_KEY_LEAVES = 'km_leaves_v1';
-const LOCAL_STORAGE_KEY_SETTLEMENTS = 'km_settlements_v1';
+const LOCAL_STORAGE_KEY_ORDERS = 'km_orders_v2';
+const LOCAL_STORAGE_KEY_BILLS = 'km_bills_v2';
+const LOCAL_STORAGE_KEY_PAYMENTS = 'km_payments_v2';
+const LOCAL_STORAGE_KEY_LEAVES = 'km_leaves_v2';
+const LOCAL_STORAGE_KEY_SETTLEMENTS = 'km_settlements_v2';
 const LOCAL_STORAGE_KEY_TODAYS_MENU = 'km_todays_menu_v3';
 
-// Clean Sample Students for testing & demo with photos & college reference data
-const SEED_STUDENTS: Student[] = [
-  { 
-    id: 'std-1', 
-    student_id: 'KM-101', 
-    name: 'Rahul Patil', 
-    phone: '7676866399', 
-    password: 'pass101', 
-    college_name: 'Engineering College', 
-    batch_year: 'CS 2026 Batch', 
-    room_batch: 'Hostel Block A, Room 101', 
-    photo_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
-    join_date: '2026-08-01', 
-    status: 'active', 
-    security_deposit: 1000, 
-    deposit_paid: true, 
-    is_parcel_delivery: true 
-  },
-  { 
-    id: 'std-2', 
-    student_id: 'KM-102', 
-    name: 'Rohan Patil', 
-    phone: '9876543210', 
-    password: 'pass102', 
-    college_name: 'Polytechnic College', 
-    batch_year: 'Mech 3rd Year', 
-    room_batch: 'Hostel Block B, Room 204', 
-    photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
-    join_date: '2026-08-01', 
-    status: 'active', 
-    security_deposit: 1000, 
-    deposit_paid: true, 
-    is_parcel_delivery: false 
-  },
-];
+// Empty Seed Students for clean production initialization
+const SEED_STUDENTS: Student[] = [];
 
 const DEFAULT_TODAYS_MENU: TodaysMenu = {
   date: new Date().toISOString().split('T')[0],
