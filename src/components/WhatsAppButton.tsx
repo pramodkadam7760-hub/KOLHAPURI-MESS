@@ -1,10 +1,18 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { MessageCircle } from 'lucide-react';
 import { MESS_DETAILS } from '@/lib/constants';
 
 export default function WhatsAppButton() {
+  const pathname = usePathname();
+
+  // Hide WhatsApp floating button on Admin ERP pages
+  if (pathname?.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <a
       href={MESS_DETAILS.whatsappLink}
