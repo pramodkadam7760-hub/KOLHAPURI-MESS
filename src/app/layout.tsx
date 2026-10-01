@@ -20,9 +20,12 @@ export const metadata: Metadata = {
   description: 'Kolhapuri Mess at Nath Pai Circle, Belagavi — Authentic homestyle Maharashtrian food. Veg & Non-Veg thalis, student mess plans, hostel delivery. Check your bill online.',
   keywords: 'Kolhapuri Mess, Belagavi mess, Belgaum mess, Maharashtrian food, student mess, hostel food',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/icon.png',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: 'https://kolhapuri-mess.vercel.app/icon.png', type: 'image/png' },
+      { url: 'https://kolhapuri-mess.vercel.app/favicon.ico' },
+    ],
+    shortcut: 'https://kolhapuri-mess.vercel.app/icon.png',
+    apple: 'https://kolhapuri-mess.vercel.app/apple-touch-icon.png',
   },
   openGraph: {
     title: 'Kolhapuri Mess — Authentic Maharashtrian Meals | Belagavi',
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
     siteName: 'Kolhapuri Mess Belagavi',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://kolhapuri-mess.vercel.app/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Kolhapuri Mess Brand Logo',
@@ -44,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Kolhapuri Mess — Authentic Maharashtrian Meals | Belagavi',
     description: 'Authentic homestyle Kolhapuri Veg & Non-Veg Thalis at Nath Pai Circle, Belagavi.',
-    images: ['/og-image.jpg'],
+    images: ['https://kolhapuri-mess.vercel.app/og-image.jpg'],
   },
 };
 
